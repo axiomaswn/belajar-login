@@ -6,7 +6,8 @@ var app = new Vue({
         email: ''
       },
       methods: {
-        login: function () {
+        login: function (e) {
+          e.preventDefault()
           $.ajax({
             url: "http://localhost:3000/login",
             type: "POST",
